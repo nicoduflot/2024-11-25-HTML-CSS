@@ -106,12 +106,46 @@ modi mollitia!
                     <dt>Capitaine Samuel Vimaire</dt>
                     <dd>Le capitaine du guet de nuit d'Ankh-Morpork</dd>
                 </dl>
-
             </article>
         </section>
         <section>
             <h2>Balise de mise en forme du texte</h2>
-
+            <p>
+                Les balises de mise en forme de texte servent a modifier l'apparence de mots ou de phrases du contenu texte. Par exemple, on peu mettre en gras et il existe deux balises
+            </p>
+            <p>
+                <strong>strong</strong> permet non seulement de mettre en gras le texte mais apporte un poid sémentaique sur le référencement.
+            </p>
+            <p>
+                <b>b</b> ou "bold", ne fait que mettre visuellement en avant le texte, sans appuyer son importance sémantique au niveau du référencement
+            </p>
+            <p>
+                La même chose avec l'italique, une version non important <i>i</i>, et une version s'appelant emphase <em>em</em>
+            </p>
+            <p>
+                Ces balises de texte et les autre sont des boîtes qui ne se comportent pas comme les autres boîtes déjà vues, elle ne prennet que la place du texte qu'elles entourent.
+                Par exemple, écrire un bout de code : <br /> <code>&lt;code&gt;&lt;br /&gt;&lt;/code&gt;</code>
+            </p>
+            <p>
+                On peut aussi écrire les <sup>exposants</sup> et les <sub>indices</sub> :<br />
+                H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>, 10m<sup>3</sup>
+            </p>
+            <p>
+                On peut aussi <s>biffer</s>, <mark>marquer au fluo</mark>, <u>souligner</u> (mais en web on NE SOULIGNE PAS car cela peut être pris pour un lien hypertexte qui ne fonctionne).
+            </p>
+            <p>
+                Certaines balises de mise en forme du texte on été dépréciée (deprecated = inutilisées et / ou plus dans les normes) mais certaines sont encore interprêtées par les navigateurs. <font color="red" size="5" face="impact">La balise font</font>
+            </p>
+            <p>
+                On passe dans ce cas là par la balise span, qui définie l'espace autour des mots qu'elle encapsule pour pouvoir y applique du style <span class="rouge-gras">CSS particulier</span>.
+            </p>
+            <style>
+                .rouge-gras{
+                    font-family: impact;
+                    color: red;
+                    font-size: 24px;
+                }
+            </style>
         </section>
     </main>
     <footer>
