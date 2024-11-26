@@ -93,18 +93,41 @@ h6{
 /* Déclaration de structures */
 
 body > header, 
-body > nav{
+body > nav, 
+body > footer{
+    padding-top: 1rem;
     background-color: black;
     color: white;
 }
 
 body > nav ul{
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     list-style-type: none;
     padding: 0;
+}
+
+body > nav ul li{
+    border-top: 1px solid grey;
 }
 
 body > nav a,
 body > nav a:visited{
     color: white;
+    display: block;
+    text-decoration: none;
+}
+
+body > nav a:hover{
+    background-color: white;
+    color: black;
+}
+
+body > header > *,
+body > nav > *,
+body > main > *,
+body > footer > *{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
