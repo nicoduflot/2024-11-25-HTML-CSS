@@ -1,0 +1,110 @@
+/*
+CSS => Cascading Style Sheet
+Feuille de style en cascade
+principes : 
+            -   les styles que l'on applique à un élément est "hérité" par les éléments qu'il contient, c'est la cascade
+            -   dans la valeur d'une propriété, il est possible de donner plusieurs choix, qui vont s'appliquer selon 
+                le contexte (ie les familles de police de caractère proriétaires des systèmes d'exploitation)
+
+Commentaire en CSS,
+Il permet d'écrire en bloc, etc.
+*/
+
+/*
+Unités de dimension les plus utilisées en web
+
+px      =>  Pixel (il est possible d'indiquer des taille à virgule flottante : 1.5px)
+em      =>  cadratin : se calcul par rapport à la taille de la police dans l'élément parent.
+rem     =>  cadratin racine : se calcul par rapport à la taille du cadratin racine 
+            déclaré soit par le navigateur soit "customisé" par le développeur
+%       =>  Pourcentage de l'espace disponible autour de l'élément
+vw & vh =>  vw : viewport with (largeur d'affichage du navigateur) 100vw = largeur totale
+            vh : viewport height (hauteur d'affichage du navigateur) 100vh = hauteur totale
+*/
+
+/* Déclarations générales 
+    -   les imports d'autre feuillets css sont a faire avant toute autre déclaration CSS,
+        mais il est possible de faire les imports après des commentaires.
+    -   :root   => la "surcharge" du feuillet css user agent 
+                (feuillet css appliqué par défaut par le navigateur) 
+    -   les éléments génériques, par exemple les comportements par défaut des images, des listes, des liens, etc.
+*/
+
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+    /* 
+    si la police Arial est installée sur l'ordinateur client, c'est celle-ci qui est utilisée 
+    Si arial n'est pas là mais Helvetica oui, c'est elle qui est utilisée.
+    Si ni Arial, ni helvetica ne sont installées, le navigateur utilise la première police sans empatement qu'il trouve
+    */
+    font-size: 1.2rem; 
+    /*
+    le navigateur a fixé 1em à 16px, en déterminant à la racine la taille de police à 1.2rem on augmente de 20% la taille du cadratin.
+    Il passe alors à 16px*20% = 3.2px, 16px + 3.2px => 19.2px, maintenant 1em = 19.2px.
+    Avec le principe de cascade, toutes les polices voient leur taille d'origine augmentées de 20%.
+    */
+    line-height: 1.8rem;
+}
+/* 
+Le css des navigateurs est un CSS déstiné par défaut à l'impression, 
+il comporte beaucoup de comportements qui rendent difficile la mise en page pour l'écran 
+*/
+/* 
+le calcul des tailles de boîte se fait par défaut en "content-box", 
+c'est à dire que si on définit la largeur d'une boîte à 200px, c'est le contenu qui applique les 200px
+donc s'il existe des marges intérieures à gauche et à droite, plus des bordures, leurs largeur s'ajoute 
+à l'élément et il apparaît plus grand
+*/
+
+*{
+    box-sizing: border-box;
+    /*
+    le sélecteur * représente n'importe quelle suite de caractère, 
+    donc représente à la fois tous les éléments de la page
+    */
+}
+
+body{
+    margin: 0;
+}
+
+/*
+D.R.Y.  => Don't Repeat Yourself 
+        => on factorise, on regroupe les comportement des style pour les éléments similaires
+*/
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6{
+    margin: 0;
+}
+
+/*  Déclarations de classes*/
+
+.rouge-gras{
+    font-family: impact;
+    color: red;
+    font-size: 24px;
+}
+
+/* Déclaration de structures */
+
+body > header, 
+body > nav{
+    background-color: black;
+    color: white;
+}
+
+body > nav ul{
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+body > nav a,
+body > nav a:visited{
+    color: white;
+}
