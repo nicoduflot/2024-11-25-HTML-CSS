@@ -54,7 +54,45 @@
                 <header>
                     <h2>Les vidéos</h2>
                 </header>
-                
+                <h3>Les vidéos hébergées sur le site</h3>
+                <p>
+                    Les vidéos sont des fichier de flux, tout comme les images, il est donc intéressant de les intégrer à l'intérieur d'une balise figure.
+                </p>
+                <p>
+                    les fichiers vidéo sont intégrables à la page en utilisant la balise video
+                </p>
+                <p>
+                    la balise vidéo peut être utilisée toute seule si il n'existe qu'un seul format de la vidéo
+                </p>
+                <figure>
+                    <video src="./media/video/Fallout-4-Launch-Trailer.mp4" controls autoplay muted preload="auto"></video>
+                    <figcaption>
+                        Vidéo du trailer du lancement du jeau Fallout 4  en 2015.
+                    </figcaption>
+                </figure>
+                <p>
+                    Si plusieurs formats de la vidéos sont proposés, on va ajouter en descendant direct de la balise vidéo une balise source. Elle permet au navigateur de faire le choix le plus adapté du médi selon les formats vidéos supporter, la qualité de la connexion, etc.
+                </p>
+                <figure>
+                    <video controls autoplay muted>
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
+                        <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.mp4" type="video/mp4" />
+                    </video>
+                </figure>
+                <h3>Les vidéos intégrées depuis des site tiers</h3>
+                <h4>Youtube</h4>
+                <iframe width="300" height="260" src="https://www.youtube.com/embed/bP1wtM9T2P0?si=RHfVfxLrZNGPSc8l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h4>Dailymotion</h4>
+                <div class="maxwidth500">
+                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                        <iframe src="https://geo.dailymotion.com/player.html?video=x4lf2sz"
+                          style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; border:none;"
+                          allowfullscreen
+                          title="Dailymotion Video Player"
+                          allow="web-share">
+                        </iframe>
+                      </div>
+                </div>
             </article>
         </section>
     </main>

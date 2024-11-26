@@ -82,7 +82,8 @@ h6{
     margin: 0;
 }
 
-img{
+img, 
+video{
     max-width: 100%;
 }
 
@@ -96,6 +97,11 @@ figure{
     font-family: impact;
     color: red;
     font-size: 24px;
+}
+
+.maxwidth500{
+    max-width: 500px;
+    border: 1px solid black;
 }
 
 /* Déclaration de structures */
