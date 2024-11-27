@@ -148,6 +148,104 @@ modi mollitia!
                 On passe dans ce cas là par la balise span, qui définie l'espace autour des mots qu'elle encapsule pour pouvoir y applique du style <span class="rouge-gras">CSS particulier</span>.
             </p>
         </section>
+        <section>
+            <h2>Design CSS</h2>
+            <article>
+                <header>
+                    <h3>Du design css tout prêt</h3>
+                </header>
+                <h4>Des rubans</h4>
+                <p>
+                    <a href="https://css-generators.com/ribbon-shapes/" target="_blank">https://css-generators.com/ribbon-shapes/</a>.
+                </p>
+                <div style="position: relative;">
+                    <div class="ribbon">PROMO</div>
+                    <img src="./images/huitieme-couleur.jpg" alt="" />
+                </div>
+                <h4>Pixel art to css</h4>
+                <div class="pixelart-to-css" style="margin-bottom: 100px;"></div>
+            </article>
+            <article>
+                <header>
+                    <h3>Design CSS DIY</h3>
+                </header>
+                <h4>Text shadow</h4>
+                <style>
+                    .text-shadow-blur{
+                        width: 200px;
+                        height: 6rem;
+                        margin: 1rem 0;
+                        color: white;
+                        font-size: 4rem;
+                        line-height: 4rem;
+                        text-shadow: 0 0 10px black;
+                    }
+                </style>
+                <div class="text-shadow-blur">
+                    Coucou
+                </div>
+                <style>
+                    .text-shadow-plain{
+                        width: 200px;
+                        height: 6rem;
+                        margin: 1rem 0;
+                        color: white;
+                        font-size: 4rem;
+                        line-height: 4rem;
+                        text-shadow: 0.2rem 0.2rem 0 black, -0.2rem -0.2rem 0 black;
+                    }
+                </style>
+                <div class="text-shadow-plain">
+                    Coucou
+                </div>
+                <h4>box-shadow</h4>
+                <style>
+                    .test-box{
+                        width: 150px;
+                        height: 150px;
+                        margin: 5rem 5rem 5rem 5rem;
+                        background-color: white;
+                    }
+                    .rainbow{
+                        box-shadow: 0 0 0 10px violet,
+                                    0 0 0 20px blue,
+                                    0 0 0 30px green,
+                                    0 0 0 40px yellow,
+                                    0 0 0 50px orange,
+                                    0 0 0 60px red;
+                    }
+
+                    .atari{
+                        background-color: black;
+                        border-top-left-radius: 50%;
+                        box-shadow: -10px 0 red,
+                                    -20px 0 orange,
+                                    -30px 0 yellow;
+                    }
+
+                    .bicolore{
+                        box-shadow: 
+                            inset 10px 0 goldenrod,
+                            inset -10px 0px goldenrod,
+                            inset 0 -10px black,
+                            inset 0 10px black,
+                            inset 0 0 0 20px fuchsia
+                        ;
+                    }
+                </style>
+                <div class="test-box rainbow">
+                    <p>
+                        Coucou
+                    </p>
+                </div>
+                <div class="test-box atari">
+                    <p style="padding-top: 2rem;color: white;">
+                        Atari
+                    </p>
+                </div>
+                <div class="test-box bicolore"></div>
+            </article>
+        </section>
     </main>
     <footer>
         <div class="copyright">&copy; DAWAN 2024</div>
