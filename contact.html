@@ -58,17 +58,103 @@
                 <fieldset>
                     <legend>Civilité</legend>
                     <p>
-                        <label for="nom">Nom* : </label> <input type="text" name="nom" id="nom" required autofocus aria-describedby="info-nom" placeholder="Votre nom" />
+                        <label for="nom">Nom* : </label> 
+                        <input type="text" name="nom" id="nom" required autofocus aria-describedby="info-nom" placeholder="Votre nom" />
                     </p>
                     <div class="info" id="info-nom">
                         Veuillez entrer votre nom de famille, ce champs est obligatoire
                     </div>
+                    <p>
+                        <label for="email">Email* : </label> 
+                        <input type="email" name="email" id="email" required aria-describedby="info-email" placeholder="Votre email" />
+                    </p>
+                    <div class="info" id="info-nom">
+                        Veuillez entrer votre email, ce champs est obligatoire
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Détails de la demande</legend>
+                    <p>
+                        <label for="typedemande">Type de la demande* : </label> 
+                        <select name="typedemande" id="typedemande" required aria-describedby="info-typedemande">
+                            <option value="" selected>Choisir un type de demande</option>
+                            <option value="0">Besoin de conseil</option>
+                            <optgroup label="Options unitaires">
+                                <option value="1">Opt 1</option>
+                                <option value="2">Opt 2</option>
+                                <option value="3">Opt 3</option>
+                                <option value="4">Opt 4</option>
+                                <option value="5">Opt 5</option>
+                                <option value="6">Opt 6</option>
+                            </optgroup>
+                            <optgroup label="Regroupement d'options">
+                                <option value="7">Tous sauf l'option 1</option>
+                                <option value="8">Tous sauf l'option 2</option>
+                                <option value="9">Tous sauf l'option 3</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <div class="info" id="info-typedemande">
+                        Veuillez choisir la ou les options pour votre demande, ce champ est obligatoire.
+                    </div>
+                    <p>
+                        Vous représentez :
+                    </p>
+                    <p class="form-check-radio">
+                        <input type="radio" name="personne" id="physique" value="physique" aria-describedby="info-personne" checked />
+                        <label for="physique">Personne physique</label><br />
+                        <input type="radio" name="personne" id="morale" value="morale" aria-describedby="info-personne" />
+                        <label for="moral">Personne morale</label> 
+                    </p>
+                    <div class="info" id="info-personne">
+                        Veuillez désigner le type de client : <br />
+                        Personne physique, exemple un particulier.<br />
+                        Personne morale, exemple un entreprise, une asso, etc.
+                    </div>
+                    <p>
+                        Type de diffusion :
+                    </p>
+                    <p class="form-check-radio">
+                        <input type="checkbox" name="diffemail" id="diffemail" aria-describedby="info-diff" checked />
+                        <label for="diffemail">Campagne d'emailing</label><br />
+                        <input type="checkbox" name="difftelephone" id="difftelephone" aria-describedby="info-dif" />
+                        <label for="difftelephone">Télé-marketing</label><br />
+                        <input type="checkbox" name="diffradio" id="diffradio" aria-describedby="info-dif" />
+                        <label for="diffradio">Publicités radiophoniques</label><br />
+                        <input type="checkbox" name="difftele" id="difftele" aria-describedby="info-dif" />
+                        <label for="difftele">Publicités télévisuelles</label>
+                    </p>
+                    <div class="info" id="info-personne">
+                        Veuillez sélectionner le ou les types de campagne de diffusion
+                    </div>
+                    <p>
+                        <input type="range" name="range" id="range" min="0.0" max="10.0" step="0.5" value="5.0"> 
+                        <span id="rangevalue">5.0</span>
+                        <script>
+                            const range = document.getElementById('range');
+                            const rangeValue = document.getElementById('rangevalue');
+                            range.addEventListener('input', function(){
+                                rangeValue.innerHTML = parseFloat(range.value).toFixed(1);
+                            });
+                        </script>
+                    </p>
+                    <p>
+                        <input type="color" name="color" id="color" value="#000000"> 
+                        <span id="colorvalue">#000000</span>
+                        <script>
+                            const color = document.getElementById('color');
+                            const colorValue = document.getElementById('colorvalue');
+                            color.addEventListener('input', function(){
+                                colorValue.innerHTML = color.value;
+                            });
+                        </script>
+                    </p>
+                    <p>
+                        <input type="number" min="0" max="20" step="0.5" />
+                    </p>
                 </fieldset>
                 <button type="submit">Envoyer</button>
             </form>
-            <p>
-
-            </p>
         </article>
     </main>
     <footer>

@@ -49,12 +49,12 @@ vw & vh =>  vw : viewport with (largeur d'affichage du navigateur) 100vw = large
     /*
     les variables en css permettent à la fois de regrouper les éléments 
     configurables réutilisés du css et en facilite la maintenance */
-    --info-block-border-color: rgb(1, 128, 212);
-    --info-block-bg-color: rgb(66, 148, 203);
+    --info-block-border-color: rgb(0, 99, 165);
+    --info-block-bg-color: #C2D7E6;
 }
 /* 
 Le css des navigateurs est un CSS déstiné par défaut à l'impression, 
-il comporte beaucoup de comportements qui rendent difficile la mise en page pour l'écran 
+il comporte beaucoup de comportements qui rendent difficile la mise en page pour l'écran
 */
 /* 
 le calcul des tailles de boîte se fait par défaut en "content-box", 
@@ -117,8 +117,11 @@ form label{
     float: left;
 }
 
-form input[type="text"]{
+form input[type="text"],
+form input[type="email"],
+form select{
     line-height: var(--general-line-height);
+    height: var(--general-line-height);
     font-size: calc(var(--general-font-size) - 0.2rem) ;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
@@ -146,6 +149,10 @@ form input[type="text"]{
     background-color: var(--info-block-bg-color);
     padding: 0.5rem;
     border-radius: 0.25rem;
+}
+
+.form-check-radio > *{
+    float: unset;
 }
 
 /* Déclaration de structures */
