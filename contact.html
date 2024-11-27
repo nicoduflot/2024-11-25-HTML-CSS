@@ -20,7 +20,56 @@
         </ul>
     </nav>
     <main>
-        
+        <article>
+            <header>
+                <h2>Les formulaires</h2>
+            </header>
+            <p>
+                Les formulaires servent à la saisie d'information par le visiteur pour traitement par le site.
+            </p>
+            <p>
+                Un formulaire est définei par la balise form, etpossède au moins deux attribut : method et action
+            </p>
+            <dl>
+                <dt><b>method :</b> la façon dont les données vont être envoyées.</dt>
+                <dd>
+                    <p>
+                        <b>get :</b> les données seront écrite dans l'url de la page de traitement<br />
+                        méthode par défaut rien l'attribut n'est pas indiqué
+                    </p>
+                    <p>
+                        <b>post :</b> les données seront envoyé dans l'entête http de la page de traitement
+                    </p>
+                </dd>
+                <dt>
+                    <b>action :</b> le chemin vers la page de traitement des données
+                    <dd>
+                        Par défaut, si action n'est pas indiquée, le formulaire est renvoyé sur la page actuelle
+                    </dd>
+                </dt>
+            </dl>
+            <h3>
+                Un formulaire
+            </h3>
+            <p>
+                Les champs marqués d'un * dont obligatoires.
+            </p>
+            <form method="get" action="./contact.html">
+                <fieldset>
+                    <legend>Civilité</legend>
+                    <p>
+                        <label for="nom">Nom* : </label> <input type="text" name="nom" id="nom" required autofocus aria-describedby="info-nom" placeholder="Votre nom" />
+                    </p>
+                    <div class="info" id="info-nom">
+                        Veuillez entrer votre nom de famille, ce champs est obligatoire
+                    </div>
+                </fieldset>
+                <button type="submit">Envoyer</button>
+            </form>
+            <p>
+
+            </p>
+        </article>
     </main>
     <footer>
         <div class="copyright">&copy; DAWAN 2024</div>

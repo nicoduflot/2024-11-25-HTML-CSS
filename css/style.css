@@ -37,13 +37,20 @@ vw & vh =>  vw : viewport with (largeur d'affichage du navigateur) 100vw = large
     Si arial n'est pas là mais Helvetica oui, c'est elle qui est utilisée.
     Si ni Arial, ni helvetica ne sont installées, le navigateur utilise la première police sans empatement qu'il trouve
     */
-    font-size: 1.2rem; 
+    --general-font-size: 1.2rem;
+    font-size: var(--general-font-size); 
     /*
     le navigateur a fixé 1em à 16px, en déterminant à la racine la taille de police à 1.2rem on augmente de 20% la taille du cadratin.
     Il passe alors à 16px*20% = 3.2px, 16px + 3.2px => 19.2px, maintenant 1em = 19.2px.
     Avec le principe de cascade, toutes les polices voient leur taille d'origine augmentées de 20%.
     */
-    line-height: 1.8rem;
+    --general-line-height: 1.8rem;
+    line-height: var(--general-line-height);
+    /*
+    les variables en css permettent à la fois de regrouper les éléments 
+    configurables réutilisés du css et en facilite la maintenance */
+    --info-block-border-color: rgb(1, 128, 212);
+    --info-block-bg-color: rgb(66, 148, 203);
 }
 /* 
 Le css des navigateurs est un CSS déstiné par défaut à l'impression, 
@@ -91,6 +98,35 @@ figure{
     text-align: center;
 }
 
+form{
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form fieldset{
+    border-style: solid;
+    border-radius: 0.25rem;
+    border-color: #333333;
+    padding: 0.5rem;
+    margin: 0;
+}
+
+form label{
+    width: 100%;
+    float: left;
+}
+
+form input[type="text"]{
+    line-height: var(--general-line-height);
+    font-size: calc(var(--general-font-size) - 0.2rem) ;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.25rem;
+    min-width: 50%;
+    border-style: solid;
+}
+
 /*  Déclarations de classes*/
 
 .rouge-gras{
@@ -102,6 +138,14 @@ figure{
 .maxwidth500{
     max-width: 500px;
     border: 1px solid black;
+}
+
+.info{
+    font-size: 0.8rem;
+    border: 2px solid var(--info-block-border-color);
+    background-color: var(--info-block-bg-color);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
 }
 
 /* Déclaration de structures */
